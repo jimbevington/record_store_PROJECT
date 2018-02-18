@@ -1,0 +1,29 @@
+<h3>Album Info</h3>
+
+<table>
+
+  <tr>
+    <th>ID</th>
+    <td><%= @album.id %></td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td><%= @album.title %></td>
+  </tr>
+  <tr>
+    <th>Artist</th>
+    <td><%= Artist.find_by_id(@album.artist_id).name %></td>
+  </tr>
+  <tr>
+    <th>Quantity</th>
+    <td><%= @album.quantity %></td>
+  </tr>
+  <tr>
+    <th>Stock Level</th>
+    <td><%= @album.stock_level %></td>
+  </tr>
+
+</table>
+
+<a href="./<%= @album.id %>/edit">Edit</a>
+<a href="./<%= @album.id %>/delete">Delete</a>

@@ -14,7 +14,9 @@
       <td><%= album.title %></td>
       <td><%= Artist.find_by_id(album.artist_id).name %></td>
       <td><%= album.stock_level %></td>
+      <td><a href="/albums/<%= album.id %>">More Info</a></td>
     </tr>
+
   <% end %>
 
 </table>
