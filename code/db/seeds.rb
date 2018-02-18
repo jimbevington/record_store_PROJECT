@@ -88,8 +88,6 @@ albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9
 # save all the albums
 albums.each{|album| album.save()}
 
-album1.title = 'Sit Down'
-album1.update()
 
 
 binding.pry
