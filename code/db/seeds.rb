@@ -3,6 +3,10 @@ require('pry')
 require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
 
+# delete all the artists prior to loading
+Artist.delete_all()
+
+
 artist1 = Artist.new({
   'name' => 'The Fall'
 })
