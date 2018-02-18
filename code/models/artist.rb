@@ -2,7 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class Artist
 
-  attr_reader :id 
+  attr_reader :id
   attr_accessor :name
 
   def initialize(options)
@@ -22,6 +22,11 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
+
+
+
+  # SELF METHODS
+
   def self.all()
     sql = "SELECT * FROM artists"
     artists = SqlRunner.run(sql)
@@ -31,6 +36,13 @@ class Artist
   def self.delete_all()
     sql = "DELETE FROM artists"
     SqlRunner.run(sql)
+  end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+    artist = SqlRunner.run(sql, values)[0]
+    return Artist.new(artist)
   end
 
 end

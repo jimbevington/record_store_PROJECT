@@ -26,7 +26,11 @@ artist5 = Artist.new({
 artists = [artist1, artist2, artist3, artist4, artist5]
 artists.each{|artist| artist.save()}
 
+# Test Artist update function
 artist1.name = 'Mark E Smith'
+artist1.update()
+# Revert to Original
+artist1.name = 'The Fall'
 artist1.update()
 
 
