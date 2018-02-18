@@ -26,6 +26,9 @@ artist5 = Artist.new({
 artists = [artist1, artist2, artist3, artist4, artist5]
 artists.each{|artist| artist.save()}
 
+artist1.name = 'Mark E Smith'
+artist1.update()
+
 
 binding.pry
 nil
