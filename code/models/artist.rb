@@ -45,4 +45,12 @@ class Artist
     return Artist.new(artist)
   end
 
+  # could adjust to handle up/down case
+  def self.find_by_name(name)
+    sql = "SELECT * FROM artists WHERE name = $1"
+    values = [name]
+    artist = SqlRunner.run(sql, values)[0]
+    return Artist.new(artist)
+  end
+
 end

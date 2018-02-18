@@ -33,6 +33,61 @@ artist1.update()
 artist1.name = 'The Fall'
 artist1.update()
 
+album1 = Album.new({
+  'title' => 'This Nations Saving Grace',
+  'artist_id' => artist1.id,
+  'quantity' => 25
+})
+album2 = Album.new({
+  'title' => 'Fall Heads Roll',
+  'artist_id' => artist1.id,
+  'quantity' => 15
+})
+album3 = Album.new({
+  'title' => 'Garden of Delete',
+  'artist_id' => artist2.id,
+  'quantity' => 10
+})
+album4 = Album.new({
+  'title' => 'Returnal',
+  'artist_id' => artist2.id,
+  'quantity' => 18
+})
+album5 = Album.new({
+  'title' => 'R Plus Seven',
+  'artist_id' => artist2.id,
+  'quantity' => 35
+})
+album6 = Album.new({
+  'title' => 'Cry of Love',
+  'artist_id' => artist3.id,
+  'quantity' => 12
+})
+album7 = Album.new({
+  'title' => 'Stretch Music',
+  'artist_id' => artist4.id,
+  'quantity' => 5
+})
+album8 = Album.new({
+  'title' => 'Yesterday You Said Tomorrow',
+  'artist_id' => artist4.id,
+  'quantity' => 26
+})
+album9 = Album.new({
+  'title' => 'Ramona Park',
+  'artist_id' => artist5.id,
+  'quantity' => 45
+})
+album10 = Album.new({
+  'title' => 'Summertime \'06',
+  'artist_id' => artist5.id,
+  'quantity' => 34
+})
+
+albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10]
+# save all the albums
+albums.each{|album| album.save()}
+
 
 binding.pry
 nil
