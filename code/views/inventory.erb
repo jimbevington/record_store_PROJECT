@@ -1,0 +1,20 @@
+<h3>Inventory</h3>
+<table>
+
+  <tr>
+    <th>ID</th>
+    <th>Album Title</th>
+    <th>Artist</th>
+    <th>Stock Level</th>
+  </tr>
+
+  <% for album in @albums %>
+    <tr>
+      <td><%= album.id %> </td>
+      <td><%= album.title %></td>
+      <td><%= Artist.find_by_id(album.artist_id).name %></td>
+      <td><%= album.stock_level %></td>
+    </tr>
+  <% end %>
+
+</table>
