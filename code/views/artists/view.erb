@@ -1,0 +1,24 @@
+<h3>Artist Info</h3>
+
+<h4>Name: <%= @artist.name %></h4>
+<p>ID: <%= @artist.id %> </p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Album Title</th>
+    <th>Stock Level</th>
+  </tr>
+
+  <% for album in @albums %>
+    <tr>
+      <td><%= album.id %></td>
+      <td><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
+      <td><%= album.stock_level %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+<a href="./<%= @artist.id %>/edit">Edit</a>
+<a href="./<%= @artist.id %>/delete">Delete</a>

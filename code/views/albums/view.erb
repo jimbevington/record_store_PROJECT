@@ -12,7 +12,7 @@
   </tr>
   <tr>
     <th>Artist</th>
-    <td><%= Artist.find_by_id(@album.artist_id).name %></td>
+    <td><a href="/artists/<%= @album.artist_id %>"><%= Artist.find_by_id(@album.artist_id).name %></a></td>
   </tr>
   <tr>
     <th>Quantity</th>
