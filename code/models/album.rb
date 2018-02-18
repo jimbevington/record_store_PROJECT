@@ -32,6 +32,16 @@ class Album
     SqlRunner.run(sql, values)
   end
 
+  def stock_level()
+    if @quantity > 20
+      return 'high'
+    elsif @quantity > 10
+      return 'medium'
+    else
+      return 'low'
+    end
+  end
+
 
   # SELF methods
   def self.all()

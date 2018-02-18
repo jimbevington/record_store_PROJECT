@@ -24,5 +24,19 @@ class TestAlbum < MiniTest::Test
     assert_equal(25, @album.quantity)
   end
 
+  def test_stock_level__high
+    assert_equal('high', @album.stock_level())
+  end
+
+  def test_stock_level__medium
+    album = Album.new({'quantity' => 12})
+    assert_equal('medium', album.stock_level())
+  end
+
+  def test_stock_level__low
+    album = Album.new({'quantity' => 5})
+    assert_equal('low', album.stock_level())
+  end
+
 
 end
