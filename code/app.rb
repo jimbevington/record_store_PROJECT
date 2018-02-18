@@ -7,3 +7,8 @@ require_relative('./controllers/artist_controller.rb')
 get '/' do
   erb(:index)
 end
+
+# NOT DONE YET
+get '/inventory' do
+  erb(:inventory)
+end
