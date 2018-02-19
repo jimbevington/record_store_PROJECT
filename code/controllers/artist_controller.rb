@@ -40,5 +40,6 @@ end
 post '/artists/:id/delete' do
   artist = Artist.find_by_id(params['id'])
   artist.delete()
+  # go HOME
   redirect to('/')
 end
