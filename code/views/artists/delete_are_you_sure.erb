@@ -1,7 +1,6 @@
 <h4>Are you sure you want to delete <%= @artist.name.upcase! %> and all their Albums?</h4>
 
-<form action="./delete" method="post">
+<form class="open-form" action="./delete" method="post">
   <input type="submit" name="delete" value="Yes">
+  <a href="../<%= @artist.id %>">No</a>
 </form>
-
-<a href="../<%= @artist.id %>">No</a>
