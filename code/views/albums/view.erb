@@ -15,6 +15,11 @@
     <td><a href="/artists/<%= @album.artist_id %>"><%= Artist.find_by_id(@album.artist_id).name %></a></td>
   </tr>
   <tr>
+    <th>Genre</th>
+    <td><%= @album.genre %></td>
+  </tr>
+  <tr>
+  <tr>
     <th>Quantity</th>
     <td><%= @album.quantity %></td>
   </tr>
