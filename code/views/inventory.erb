@@ -5,6 +5,7 @@
     <th>ID</th>
     <th>Album Title</th>
     <th>Artist</th>
+    <th>Markup %</th>
     <th>Stock Level</th>
   </tr>
 
@@ -13,6 +14,7 @@
       <td><%= album.id %> </td>
       <td><%= album.title %></td>
       <td><a href="/artists/<%= album.artist_id %>"><%= Artist.find_by_id(album.artist_id).name %></a></td>
+      <td><%= album.markup %></td>
       <td><%= album.stock_level %></td>
       <td><a href="/albums/<%= album.id %>">More Info</a></td>
     </tr>
