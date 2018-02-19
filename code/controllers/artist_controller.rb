@@ -31,3 +31,14 @@ post '/artists/:id/update' do
   artist.update()
   redirect to("/artists/#{artist.id}")
 end
+
+get '/artists/:id/delete_are_you_sure' do
+  @artist = Artist.find_by_id(params['id'])
+  erb(:"artists/delete_are_you_sure")
+end
+
+post '/artists/:id/delete' do
+  artist = Artist.find_by_id(params['id'])
+  artist.delete()
+  redirect to('/')
+end
