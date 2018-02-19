@@ -36,51 +36,61 @@ artist1.update()
 album1 = Album.new({
   'title' => 'This Nations Saving Grace',
   'artist_id' => artist1.id,
+  'genre' => 'Post Punk',
   'quantity' => 25
 })
 album2 = Album.new({
   'title' => 'Fall Heads Roll',
   'artist_id' => artist1.id,
+  'genre' => 'Post Punk',
   'quantity' => 15
 })
 album3 = Album.new({
   'title' => 'Garden of Delete',
   'artist_id' => artist2.id,
+  'genre' => 'Electronic',
   'quantity' => 10
 })
 album4 = Album.new({
   'title' => 'Returnal',
   'artist_id' => artist2.id,
+  'genre' => 'Vaporwave',
   'quantity' => 18
 })
 album5 = Album.new({
   'title' => 'R Plus Seven',
   'artist_id' => artist2.id,
+  'genre' => 'Electronic',
   'quantity' => 35
 })
 album6 = Album.new({
   'title' => 'Cry of Love',
   'artist_id' => artist3.id,
+  'genre' => 'Rock',
   'quantity' => 12
 })
 album7 = Album.new({
   'title' => 'Stretch Music',
   'artist_id' => artist4.id,
+  'genre' => 'Jazz',
   'quantity' => 5
 })
 album8 = Album.new({
   'title' => 'Yesterday You Said Tomorrow',
   'artist_id' => artist4.id,
+  'genre' => 'Jazz',
   'quantity' => 26
 })
 album9 = Album.new({
   'title' => 'Ramona Park',
   'artist_id' => artist5.id,
+  'genre' => 'Hip Hop',
   'quantity' => 45
 })
 album10 = Album.new({
   'title' => 'Summertime \'06',
   'artist_id' => artist5.id,
+  'genre' => 'Hip Hop',
   'quantity' => 34
 })
 
