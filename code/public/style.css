@@ -11,7 +11,13 @@ h4{
 
 body{
   margin:0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.15em;
 }
+
+
+
+/*   HEADER / FOOTER styles   */
 
 header, footer{
   background: rgba(255, 105, 120, 1);
@@ -21,6 +27,27 @@ header, footer{
 
 header {
   border-bottom: inset rgba(109, 67, 90, 1) 3px
+}
+
+h1, h2{
+  font-family: 'Gochi Hand', cursive;
+}
+
+h1{
+  font-size: 70px;
+  font-weight: lighter;
+}
+
+.title, .subtitle{
+  display:inline;
+}
+
+.title{
+  padding-right:30px;
+}
+
+.subtitle{
+  font-style: italic;
 }
 
 footer{
@@ -33,6 +60,9 @@ footer{
   margin-bottom:0px;
 }
 
+
+/*   CONTENT styles   */
+
 main {
   background: rgba(255, 252, 249, 1);
   display: flex;
@@ -42,6 +72,8 @@ main {
   align-items:center;
 
 }
+
+
 
 /* At some point, refactor all the common settings into the one expression */
 
