@@ -8,7 +8,7 @@ $color5: rgba(53, 45, 57, 1); */
 h3{
   font-size: 1.5em;
   font-weight: 1000;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.5em;
 }
 
 h4{
@@ -18,7 +18,7 @@ h4{
 body{
   margin:0;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
 }
 
 
@@ -79,19 +79,19 @@ footer{
 main {
   background: rgba(255, 252, 249, 1);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   padding: 1.5em;
   justify-content: space-around;
   align-items:center;
-
 }
 
-
+.red{
+  background: rgba(255, 105, 120, 1);
+}
 
 /* At some point, refactor all the common settings into the one expression */
 
 .flex_item{
-  background: rgba(255, 105, 120, 1);
   margin: auto;
   margin-top:2em;
   margin-bottom:2em;
@@ -105,6 +105,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
+
 
 .big_link{
   background: rgba(177, 237, 232, 1);
@@ -152,4 +153,24 @@ td{
 
 .center-text{
   text-align: center;
+}
+
+form{
+  display:flex;
+  flex-flow:column;
+  border: solid 2px rgba(109, 67, 90, 1);
+  padding: 1em;
+  padding-top:2em;
+  padding-bottom:2em;
+  border-radius:10px;
+  margin:auto;
+  height:6em;
+  width:12em;
+  justify-content: space-evenly;
+  align-items:center;
+}
+
+
+label{
+  letter-spacing:0em;
 }
