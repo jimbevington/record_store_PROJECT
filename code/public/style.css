@@ -2,10 +2,27 @@
   background-color: red;
 } */
 
+/* RGB */
+/* $color1: rgba(255, 105, 120, 1);
+$color2: rgba(255, 252, 249, 1);
+$color3: rgba(177, 237, 232, 1);
+$color4: rgba(109, 67, 90, 1);
+$color5: rgba(53, 45, 57, 1); */
+
 header, footer{
-  background: tomato;
+  background: rgba(255, 105, 120, 1);
 }
 
 main {
-  background: aquamarine;
+  background: rgba(255, 252, 249, 1);
+  display: flex;
+
+}
+
+.flex_item{
+  background: rgba(255, 105, 120, 1);;
+}
+
+.big_link{
+  background: rgba(177, 237, 232, 1);
 }
