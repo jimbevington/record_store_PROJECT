@@ -45,6 +45,12 @@ class Album
     end
   end
 
+  def markup()
+    margin = @sell_price.to_f - @buy_price.to_f
+    markup = margin/@buy_price.to_f * 100.0
+    return "#{markup}%"
+  end
+
 
   # SELF methods
   def self.all()
