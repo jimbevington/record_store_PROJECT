@@ -46,8 +46,28 @@ h1{
   font-weight: lighter;
 }
 
+
+
+a:link{
+  color:inherit;
+}
+
+a:visited{
+  color:inherit;
+}
+
+a:hover{
+  color:rgba(109, 67, 90, 1);
+}
+
+a, .title, .subtitle{
+  text-decoration: none;
+  color:black;
+}
+
 .title, .subtitle{
   display:inline;
+  text-decoration: none;
 }
 
 .title{
