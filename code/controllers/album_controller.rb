@@ -11,7 +11,9 @@ get '/albums/new' do
 end
 
 post '/albums' do
-  artist_id = Artist.find_by_name(params('artist')).id
+  # issue - what happens if the Artist doesn't exist
+  artist = Artist.find_by_name(params['artist'])
+  params['artist_id'] = artist.id
   album = Album.new(params)
   album.save()
   redirect to("/albums/#{album.id}")

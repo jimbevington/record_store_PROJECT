@@ -20,3 +20,8 @@ get '/artists/:id' do
   @albums = @artist.albums
   erb(:"artists/view")
 end
+
+get '/artists/:id/edit' do
+  @artist = Artist.find_by_id(params['id'])
+  erb(:"artists/edit")
+end
