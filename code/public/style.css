@@ -26,7 +26,8 @@ header, footer{
 }
 
 header {
-  border-bottom: inset rgba(109, 67, 90, 1) 3px
+  border-bottom: inset rgba(109, 67, 90, 1) 2px;
+  /* display:flex; */
 }
 
 h1, h2{
@@ -58,8 +59,14 @@ footer{
 
   /* height: 2em; */
   margin-bottom:0px;
+  border-top: inset rgba(109, 67, 90, 1) 2px;
 }
 
+/* nav {
+  display:inline-block;
+  position:relative;
+  right:0;
+} */
 
 /*   CONTENT styles   */
 
@@ -102,4 +109,41 @@ main {
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin:1.5em;
+}
+
+.big-table{
+  width:80%;
+}
+
+tr:hover{
+  background: lightgrey;
+}
+
+th, td{
+  padding:7px;
+}
+
+th{
+  background: rgba(177, 237, 232, 1);
+  color: rgba(53, 45, 57, 1);
+  border: 1px solid black;
+}
+
+td{
+  border: 1px solid black;
+  margin:0;
+}
+
+.italic-text{
+  font-style: italic;
+}
+
+.center-text{
+  text-align: center;
 }

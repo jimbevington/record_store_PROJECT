@@ -1,5 +1,6 @@
 <h3>Inventory</h3>
-<table>
+
+<table class="big-table">
 
   <tr>
     <th>ID</th>
@@ -7,16 +8,17 @@
     <th>Artist</th>
     <th>Markup %</th>
     <th>Stock Level</th>
+    <th></th>
   </tr>
 
   <% for album in @albums %>
     <tr>
       <td><%= album.id %> </td>
-      <td><%= album.title %></td>
+      <td class="italic-text"><%= album.title %></td>
       <td><a href="/artists/<%= album.artist_id %>"><%= Artist.find_by_id(album.artist_id).name %></a></td>
-      <td><%= album.markup %></td>
-      <td><%= album.stock_level %></td>
-      <td><a href="/albums/<%= album.id %>">More Info</a></td>
+      <td class="center-text"><%= album.markup %></td>
+      <td class="center-text"><%= album.stock_level %></td>
+      <td class="center-text"><a href="/albums/<%= album.id %>">More Info</a></td>
     </tr>
 
   <% end %>
