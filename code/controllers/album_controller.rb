@@ -23,3 +23,14 @@ get '/albums/:id' do
   @album = Album.find_by_id(params['id'].to_i)
   erb( :"albums/view" )
 end
+
+get '/albums/:id/edit' do
+  @album = Album.find_by_id(params['id'])
+  erb(:"albums/edit")
+end
+
+post '/albums/:id/update' do
+  album = Album.new(params)
+  album.update()
+  redirect to("/albums/#{album.id}")
+end
