@@ -37,61 +37,81 @@ album1 = Album.new({
   'title' => 'This Nations Saving Grace',
   'artist_id' => artist1.id,
   'genre' => 'Post Punk',
-  'quantity' => 25
+  'quantity' => 25,
+  'buy_price' => 4,
+  'sell_price' => 10
 })
 album2 = Album.new({
   'title' => 'Fall Heads Roll',
   'artist_id' => artist1.id,
   'genre' => 'Post Punk',
-  'quantity' => 15
+  'quantity' => 15,
+  'buy_price' => 5,
+  'sell_price' => 10
 })
 album3 = Album.new({
   'title' => 'Garden of Delete',
   'artist_id' => artist2.id,
   'genre' => 'Electronic',
-  'quantity' => 10
+  'quantity' => 10,
+  'buy_price' => 5,
+  'sell_price' => 11
 })
 album4 = Album.new({
   'title' => 'Returnal',
   'artist_id' => artist2.id,
   'genre' => 'Vaporwave',
-  'quantity' => 18
+  'quantity' => 18,
+  'buy_price' => 3,
+  'sell_price' => 9
 })
 album5 = Album.new({
   'title' => 'R Plus Seven',
   'artist_id' => artist2.id,
   'genre' => 'Electronic',
-  'quantity' => 35
+  'quantity' => 35,
+  'buy_price' => 4,
+  'sell_price' => 8
 })
 album6 = Album.new({
   'title' => 'Cry of Love',
   'artist_id' => artist3.id,
   'genre' => 'Rock',
-  'quantity' => 12
+  'quantity' => 12,
+  'buy_price' => 8,
+  'sell_price' => 15
 })
 album7 = Album.new({
   'title' => 'Stretch Music',
   'artist_id' => artist4.id,
   'genre' => 'Jazz',
-  'quantity' => 5
+  'quantity' => 5,
+  'buy_price' => 7,
+  'sell_price' => 14
 })
 album8 = Album.new({
   'title' => 'Yesterday You Said Tomorrow',
   'artist_id' => artist4.id,
   'genre' => 'Jazz',
-  'quantity' => 26
+  'quantity' => 26,
+  'buy_price' => 4,
+  'sell_price' => 12
 })
 album9 = Album.new({
   'title' => 'Ramona Park',
   'artist_id' => artist5.id,
   'genre' => 'Hip Hop',
-  'quantity' => 45
+  'quantity' => 45,
+  'buy_price' => 3,
+  'sell_price' => 11
 })
 album10 = Album.new({
   'title' => 'Summertime \'06',
   'artist_id' => artist5.id,
   'genre' => 'Hip Hop',
-  'quantity' => 34
+  'quantity' => 34,
+  'buy_price' => 3,
+  'sell_price' => 10
 })
 
 albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10]

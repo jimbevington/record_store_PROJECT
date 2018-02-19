@@ -11,5 +11,7 @@ CREATE TABLE albums(
   title VARCHAR(255),
   artist_id INT REFERENCES artists(id) ON DELETE CASCADE,
   genre VARCHAR(255),
-  quantity INT
+  quantity INT,
+  buy_price INT,
+  sell_price INT
 );
