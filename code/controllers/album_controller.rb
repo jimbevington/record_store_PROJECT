@@ -26,10 +26,13 @@ end
 
 get '/albums/:id/edit' do
   @album = Album.find_by_id(params['id'])
+  @artist = Artist.find_by_id(@album.artist_id)
   erb(:"albums/edit")
 end
 
 post '/albums/:id/update' do
+  artist = Artist.find_by_name(params['artist'])
+  params['artist_id'] = artist.id
   album = Album.new(params)
   album.update()
   redirect to("/albums/#{album.id}")
