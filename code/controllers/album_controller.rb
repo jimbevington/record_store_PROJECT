@@ -37,3 +37,14 @@ post '/albums/:id/update' do
   album.update()
   redirect to("/albums/#{album.id}")
 end
+
+get '/albums/:id/delete_are_you_sure' do
+  @album = Album.find_by_id(params['id'])
+  erb(:"albums/delete_are_you_sure")
+end
+
+post '/albums/:id/delete' do
+  album = Album.find_by_id(params['id'])
+  album.delete()
+  redirect to('/inventory')
+end
