@@ -337,7 +337,7 @@ a.no-underline{
   text-decoration:none;
 }
 
-.red_tr{
+/* .red_tr{
   border-bottom: solid 3px #FD2F2F;
 
 }
@@ -348,7 +348,7 @@ a.no-underline{
 
 .green_tr{
   border-bottom: solid 3px #43FF50;
-}
+} */
 
 td.red_tr{
   background: #FD2F2F;

@@ -10,7 +10,6 @@
 </form>
 
 <table class="big-table">
-
   <tr>
     <th>ID</th>
     <th>Album Title</th>
@@ -21,8 +20,8 @@
   </tr>
 
   <% for album in @albums %>
-    <!-- Assign a different border color based on Stock Level -->
-    <tr class=<%= @stock_style_classes[album.stock_level] %> >
+
+    <tr> >
       <td><%= album.id %> </td>
       <td class="italic-text">
         <a class="no-underline" href="/albums/<%= album.id %>"><%= album.title %></a>
