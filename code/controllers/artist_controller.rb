@@ -16,9 +16,6 @@ post '/artists' do
 end
 
 get '/artists/:id' do
-  @stock_style_classes = {'high' => "green_tr",
-                     'medium' => "amber_tr",
-                     'low' => "red_tr"}
   @artist = Artist.find_by_id(params['id'].to_i)
   @albums = @artist.albums
   erb(:"artists/view")

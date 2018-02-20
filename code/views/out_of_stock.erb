@@ -1,15 +1,6 @@
-<h3 >Inventory</h3>
+<h3>Out of Stock</h3>
 
-<form class="small_form no-border no-margin no-padding row_form" method="post"  action="/inventory">
-  <label class="no-bottom-space" for="order-by">Order by:</label>
-  <select name="field" id="field">
-    <option value="title">Album Title</option>
-    <option value="quantity">Stock Level</option>
-  </select>
-  <input type="submit" value="Go">
-</form>
-
-<a class="italic-text small-text no-bottom-space extra-top-padding" href="/inventory/out_of_stock">view Out-Of-Stock items</a>
+<a class="italic-text" href="../inventory">back to Inventory</a>
 
 <table class="big-table">
   <tr>
@@ -23,7 +14,7 @@
 
   <% for album in @albums %>
 
-    <% unless album.stock_level == 'out of stock' %>
+    <% if album.stock_level == 'out of stock' %>
 
       <tr>
         <td><%= album.id %> </td>

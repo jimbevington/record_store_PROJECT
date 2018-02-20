@@ -25,9 +25,6 @@ post '/albums' do
 end
 
 get '/albums/:id' do
-  @stock_style_classes = {'high' => "green_tr",
-                     'medium' => "amber_tr",
-                     'low' => "red_tr"}
   @album = Album.find_by_id(params['id'].to_i)
   erb( :"albums/view" )
 end

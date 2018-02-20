@@ -18,7 +18,7 @@
       <td><%= album.id %></td>
       <td class="italic-text"><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
       <td class="center-text
-                <%= @stock_style_classes[album.stock_level] %>">
+                <%= $stock_style_classes[album.stock_level] %>">
                 <%= album.stock_level %>
       </td>
     </tr>

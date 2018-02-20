@@ -361,3 +361,15 @@ td.amber_tr{
 td.green_tr{
   background: #43FF50;
 }
+
+td.grey_tr{
+  background: grey;
+}
+
+.small-text{
+  font-size: 0.8em;
+}
+
+.extra-top-padding{
+  padding-top: 1em;
+}
