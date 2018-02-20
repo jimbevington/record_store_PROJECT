@@ -1,9 +1,15 @@
-<a class="left-side italic-text" href="/albums/<%= @album.id %>">back to Album</a>
+<!-- back to Album link -->
+<a class="left-side italic-text" href="/albums/<%= @album.id %>">
+  back to Album
+</a>
 
 <h3 class="no-bottom-space">Edit Album</h3>
 
+<!-- form posts data to UPDATE method -->
 <form method="post" action="/albums/<%= @album.id %>/update" >
 
+  <!-- fields get data from @album var -->
+  
   <label for="title">Title:</label>
   <input type="text" name="title" value="<%= @album.title %>">
 
