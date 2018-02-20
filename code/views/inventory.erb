@@ -29,7 +29,10 @@
       </td>
       <td><a href="/artists/<%= album.artist_id %>"><%= Artist.find_by_id(album.artist_id).name %></a></td>
       <td class="center-text"><%= album.markup %></td>
-      <td class="center-text"><%= album.stock_level %></td>
+      <td class="center-text
+        <%= @stock_style_classes[album.stock_level] %>">
+        <%= album.stock_level %>
+      </td>
       <td class="center-text"><a href="/albums/<%= album.id %>">More Info</a></td>
     </tr>
 

@@ -338,16 +338,26 @@ a.no-underline{
 }
 
 .red_tr{
-  border: inset 3px red;
-  /* background: #FF9F9F; */
+  border-bottom: solid 3px #FD2F2F;
+
 }
 
 .amber_tr{
-  border: inset 3px orange;
-  /* background: #FFD99F; */
+  border-bottom: solid 3px #FDB82F;
 }
 
 .green_tr{
-  border: inset 3px green;
-  /* background: #A6FFAC; */
+  border-bottom: solid 3px #43FF50;
+}
+
+td.red_tr{
+  background: #FD2F2F;
+}
+
+td.amber_tr{
+  background: #FDB82F;
+}
+
+td.green_tr{
+  background: #43FF50;
 }

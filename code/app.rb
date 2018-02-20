@@ -18,8 +18,10 @@ post '/inventory' do
   erb(:inventory)
 end
 
-# NOT DONE YET
 get '/inventory' do
+  @stock_style_classes = {'high' => "green_tr",
+                     'medium' => "amber_tr",
+                     'low' => "red_tr"}
   @albums = Album.all()
   erb(:inventory)
 end
