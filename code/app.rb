@@ -15,3 +15,8 @@ get '/inventory' do
   @albums = Album.all()
   erb(:inventory)
 end
+
+post '/inventory/order' do
+  @albums = Album.all_order_by(params['field'])
+  erb(:inventory)
+end
