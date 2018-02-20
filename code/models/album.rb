@@ -67,7 +67,6 @@ class Album
     return albums.map{|album| Album.new(album)}
   end
 
-
   def self.delete_all()
     sql = "DELETE FROM albums"
     SqlRunner.run(sql)
@@ -78,6 +77,15 @@ class Album
     values = [id]
     album = SqlRunner.run(sql, values)[0]
     return Album.new(album)
+  end
+
+  def self.search(field, term)
+    term_lc = term.downcase + '%'
+    term_cap = term.capitalize + '%'
+    sql = "SELECT * FROM albums WHERE (#{field} LIKE $1) OR (#{field} LIKE $2)"
+    values = [term_lc, term_cap]
+    result = SqlRunner.run(sql, values)
+    return result.map{|album| Album.new(album)}
   end
 
 end
