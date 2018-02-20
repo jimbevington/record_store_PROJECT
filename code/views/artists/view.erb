@@ -1,6 +1,8 @@
-<h3>Artist Info</h3>
+<a class="left-side italic-text" href="../inventory">back to Inventory</a>
 
-<h4 class="center-text">
+<h3 class="no-bottom-space top-space">Artist Info</h3>
+
+<h4 class="center-text no-bottom-space">
   Name: <span class="italic-text"><%= @artist.name %></span>
 </h4>
 
@@ -21,5 +23,7 @@
 
 </table>
 
-<a href="./<%= @artist.id %>/edit">Edit</a>
-<a href="./<%= @artist.id %>/delete_are_you_sure">Delete</a>
+<section class="flex_item_compact">
+<a class="big_link no_underline" href="./<%= @artist.id %>/edit">Edit</a>
+<a class="big_link no_underline" href="./<%= @artist.id %>/delete_are_you_sure">Delete</a>
+</section>

@@ -1,4 +1,4 @@
-<h3>Inventory</h3>
+<h3 class="no-bottom-space">Inventory</h3>
 
 <table class="big-table">
 
@@ -14,7 +14,9 @@
   <% for album in @albums %>
     <tr>
       <td><%= album.id %> </td>
-      <td class="italic-text"><%= album.title %></td>
+      <td class="italic-text">
+        <a class="no-underline" href="/albums/<%= album.id %>"><%= album.title %></a>
+      </td>
       <td><a href="/artists/<%= album.artist_id %>"><%= Artist.find_by_id(album.artist_id).name %></a></td>
       <td class="center-text"><%= album.markup %></td>
       <td class="center-text"><%= album.stock_level %></td>

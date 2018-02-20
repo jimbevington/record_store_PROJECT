@@ -1,4 +1,6 @@
-<h3>Album Info</h3>
+<a class="left-side italic-text" href="../inventory">back to Inventory</a>
+
+<h3 class="no-bottom-space top-space">Album Info</h3>
 
 <table>
 
@@ -32,6 +34,7 @@
   </tr>
 
 </table>
-
-<a href="./<%= @album.id %>/edit">Edit</a>
-<a href="./<%= @album.id %>/delete_are_you_sure">Delete</a>
+<section class="flex_item_compact">
+  <a class="big_link" href="./<%= @album.id %>/edit">Edit</a>
+  <a class="big_link" href="./<%= @album.id %>/delete_are_you_sure">Delete</a>
+</section>
