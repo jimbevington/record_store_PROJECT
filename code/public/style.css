@@ -199,7 +199,7 @@ main {
 }
 
 table{
-  border: 2px solid black;
+  border: 1px solid black;
   border-collapse: collapse;
   margin:1.5em;
 }
@@ -219,11 +219,11 @@ th, td{
 th{
   background: rgba(177, 237, 232, 1);
   color: rgba(53, 45, 57, 1);
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 td{
-  border: 2px solid black;
+  border: 1px solid black;
   margin:0;
 }
 

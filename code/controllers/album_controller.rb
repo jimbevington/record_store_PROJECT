@@ -12,11 +12,16 @@ end
 
 post '/albums' do
   # issue - what happens if the Artist doesn't exist
+  @artist = params['artist']
   artist = Artist.find_by_name(params['artist'])
-  params['artist_id'] = artist.id
-  album = Album.new(params)
-  album.save()
-  redirect to("/albums/#{album.id}")
+  unless artist == nil
+    params['artist_id'] = artist.id
+    album = Album.new(params)
+    album.save()
+    redirect to("/albums/#{album.id}")
+  else
+    erb(:"albums/no_artist")
+  end
 end
 
 get '/albums/:id' do
