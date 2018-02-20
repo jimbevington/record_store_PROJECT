@@ -12,6 +12,7 @@ $stock_style_classes = {'high' => "green_tr",
                  'out of stock' => "grey_tr"}
 
 get '/' do
+  @albums = Album.all()
   erb(:index)
 end
 
