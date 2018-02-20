@@ -337,6 +337,15 @@ a.no-underline{
   text-decoration:none;
 }
 
+form.search_form{
+  border:none;
+  /* flex-flow:row nowrap; */
+  justify-content: space-evenly;
+  align-items:center;
+  min-width:50%;
+  height:2em;
+}
+
 /* .red_tr{
   border-bottom: solid 3px #FD2F2F;
 
