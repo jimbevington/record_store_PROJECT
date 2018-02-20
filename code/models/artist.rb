@@ -69,7 +69,7 @@ class Artist
     result = SqlRunner.run(sql, values)
     artist = result.map{|artist| Artist.new(artist)}
     if artist.length() > 0
-      return Artist.new(artist[0])
+      return artist[0]
     else
       return nil
     end
