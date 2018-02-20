@@ -22,8 +22,14 @@ artist4 = Artist.new({
 artist5 = Artist.new({
   'name' => 'Vince Staples'
 })
+artist6 = Artist.new({
+  'name' => 'Iannis Xenakis'
+})
+artist7 = Artist.new({
+  'name' => 'Talk Talk'
+})
 
-artists = [artist1, artist2, artist3, artist4, artist5]
+artists = [artist1, artist2, artist3, artist4, artist5, artist6, artist7]
 artists.each{|artist| artist.save()}
 
 # Test Artist update function
@@ -113,8 +119,40 @@ album10 = Album.new({
   'buy_price' => 3,
   'sell_price' => 10
 })
+album11 = Album.new({
+  'title' => 'Chamber Music',
+  'artist_id' => artist6.id,
+  'genre' => 'Classical',
+  'quantity' => 0,
+  'buy_price' => 3,
+  'sell_price' => 10
+})
+album12 = Album.new({
+  'title' => 'Selected Electroacoustic Works',
+  'artist_id' => artist6.id,
+  'genre' => 'Electroacoustic',
+  'quantity' => 1,
+  'buy_price' => 8,
+  'sell_price' => 12
+})
+album13 = Album.new({
+  'title' => 'Laughing Stock',
+  'artist_id' => artist7.id,
+  'genre' => 'Rock',
+  'quantity' => 0,
+  'buy_price' => 5,
+  'sell_price' => 8
+})
+album14 = Album.new({
+  'title' => 'The Party\'s Over',
+  'artist_id' => artist7.id,
+  'genre' => 'Rock',
+  'quantity' => 10,
+  'buy_price' => 6,
+  'sell_price' => 9
+})
 
-albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10]
+albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10, album11, album12, album13, album14]
 # save all the albums
 albums.each{|album| album.save()}
 
