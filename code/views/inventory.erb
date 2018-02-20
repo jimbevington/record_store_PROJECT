@@ -1,9 +1,9 @@
 <h3 class="no-bottom-space">Inventory</h3>
 
-<form method="post"  action="/inventory">
+<form class="small_form no-border no-margin no-padding row_form" method="post"  action="/inventory">
+  <label class="no-bottom-space" for="order-by">Order by:</label>
   <select name="field" id="field">
     <option value="title">Album Title</option>
-    <option value="artist_id">Artist</option>
     <option value="quantity">Stock Level</option>
   </select>
   <input type="submit" value="Go">
@@ -21,7 +21,8 @@
   </tr>
 
   <% for album in @albums %>
-    <tr>
+    <!-- Assign a different border color based on Stock Level -->
+    <tr class=<%= @stock_style_classes[album.stock_level] %> >
       <td><%= album.id %> </td>
       <td class="italic-text">
         <a class="no-underline" href="/albums/<%= album.id %>"><%= album.title %></a>

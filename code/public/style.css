@@ -199,7 +199,7 @@ main {
 }
 
 table{
-  border: 1px solid black;
+  border: 2px solid black;
   border-collapse: collapse;
   margin:1.5em;
 }
@@ -219,11 +219,11 @@ th, td{
 th{
   background: rgba(177, 237, 232, 1);
   color: rgba(53, 45, 57, 1);
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 td{
-  border: 1px solid black;
+  border: 2px solid black;
   margin:0;
 }
 
@@ -254,7 +254,8 @@ form{
 
 form.small_form{
   margin:0;
-  height:2em;
+  max-height:2em;
+  min-height:3em;
   width:5em;
 }
 
@@ -262,6 +263,10 @@ form.small_form{
   display:flex;
   flex-flow:column;
   border:none;
+}
+
+form.row_form{
+  flex-flow:row wrap;
 }
 
 label{
@@ -330,4 +335,19 @@ input[type=submit]{
 
 a.no-underline{
   text-decoration:none;
+}
+
+.red_tr{
+  border: inset 3px red;
+  /* background: #FF9F9F; */
+}
+
+.amber_tr{
+  border: inset 3px orange;
+  /* background: #FFD99F; */
+}
+
+.green_tr{
+  border: inset 3px green;
+  /* background: #A6FFAC; */
 }

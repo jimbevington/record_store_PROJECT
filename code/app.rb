@@ -11,6 +11,9 @@ get '/' do
 end
 
 post '/inventory' do
+  @stock_style_classes = {'high' => "green_tr",
+                     'medium' => "amber_tr",
+                     'low' => "red_tr"}
   @albums = Album.all_order_by(params['field'])
   erb(:inventory)
 end
