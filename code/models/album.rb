@@ -79,10 +79,10 @@ class Album
     return Album.new(album)
   end
 
-  def self.search(field, term)
+  def self.search(term)
     term_lc = term.downcase + '%'
     term_cap = term.capitalize + '%'
-    sql = "SELECT * FROM albums WHERE (#{field} LIKE $1) OR (#{field} LIKE $2)"
+    sql = "SELECT * FROM albums WHERE (title LIKE $1) OR (title LIKE $2)"
     values = [term_lc, term_cap]
     result = SqlRunner.run(sql, values)
     return result.map{|album| Album.new(album)}

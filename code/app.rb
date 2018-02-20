@@ -29,3 +29,8 @@ get '/inventory/out_of_stock' do
   @albums = Album.all()
   erb(:out_of_stock)
 end
+
+post '/inventory/search' do
+  @albums = Album.search(params['term'])
+  erb(:search_results)
+end
