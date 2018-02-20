@@ -10,13 +10,13 @@ get '/' do
   erb(:index)
 end
 
-# NOT DONE YET
-get '/inventory' do
-  @albums = Album.all()
+post '/inventory' do
+  @albums = Album.all_order_by(params['field'])
   erb(:inventory)
 end
 
-post '/inventory/order' do
-  @albums = Album.all_order_by(params['field'])
+# NOT DONE YET
+get '/inventory' do
+  @albums = Album.all()
   erb(:inventory)
 end
