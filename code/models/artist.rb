@@ -44,6 +44,12 @@ class Artist
     return artists.map{|artist| Artist.new(artist)}
   end
 
+  def self.all_order_by(field)
+    sql = "SELECT * FROM artists ORDER BY #{field}"
+    artists = SqlRunner.run(sql)
+    return artists.map{|artist| Artist.new(artist)}
+  end
+
   def self.delete_all()
     sql = "DELETE FROM artists"
     SqlRunner.run(sql)
