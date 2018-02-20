@@ -6,25 +6,33 @@
   Name: <span class="italic-text"><%= @artist.name %></span>
 </h4>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Album Title</th>
-    <th>Stock Level</th>
-  </tr>
+<% if @albums.length() > 1 %>
 
-  <% for album in @albums %>
+  <table>
     <tr>
-      <td><%= album.id %></td>
-      <td class="italic-text"><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
-      <td class="center-text
-                <%= $stock_style_classes[album.stock_level] %>">
-                <%= album.stock_level %>
-      </td>
+      <th>ID</th>
+      <th>Album Title</th>
+      <th>Stock Level</th>
     </tr>
-  <% end %>
 
-</table>
+    <% for album in @albums %>
+      <tr>
+        <td><%= album.id %></td>
+        <td class="italic-text"><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
+        <td class="center-text
+                  <%= $stock_style_classes[album.stock_level] %>">
+                  <%= album.stock_level %>
+        </td>
+      </tr>
+    <% end %>
+
+  </table>
+
+<% else %>
+
+  <p>No Albums in stock.</p>
+
+<% end %>
 
 <section class="flex_item_compact">
 <a class="big_link no_underline" href="./<%= @artist.id %>/edit">Edit</a>
