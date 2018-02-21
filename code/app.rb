@@ -36,9 +36,11 @@ get '/inventory/out_of_stock' do
 end
 
 post '/inventory/search' do
+  # get albums with search term
   @albums = Album.search(params['term'])
-  # find albums by artist name
+  # get artists with search term
   artists = Artist.search(params['term'])
+  # get the albums of found artists
   artist_albums = artists.map{|artist| artist.albums()}
   artist_albums.flatten! # flatten to single array
   artist_albums.uniq! # remove duplicates

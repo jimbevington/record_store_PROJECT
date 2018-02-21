@@ -27,16 +27,18 @@ artist6 = Artist.new({
 artist7 = Artist.new({
   'name' => 'Talk Talk'
 })
+artist8 = Artist.new({
+  'name' => 'Killing Joke'
+})
+artist9 = Artist.new({
+  'name' => 'Echo & the Bunnymen'
+})
 
-artists = [artist1, artist2, artist3, artist4, artist5, artist6, artist7]
+artists = [artist1, artist2, artist3, artist4, artist5, artist6, artist7, artist8, artist9]
+
 artists.each{|artist| artist.save()}
 
-# Test Artist update function
-artist1.name = 'Mark E Smith'
-artist1.update()
-# Revert to Original
-artist1.name = 'The Fall'
-artist1.update()
+# SET UP Albums
 
 album1 = Album.new({
   'title' => 'This Nations Saving Grace',
@@ -150,8 +152,25 @@ album14 = Album.new({
   'buy_price' => 6,
   'sell_price' => 9
 })
+album15 = Album.new({
+  'title' => 'Fire Dances',
+  'artist_id' => artist8.id,
+  'genre' => 'Rock',
+  'quantity' => 3,
+  'buy_price' => 2,
+  'sell_price' => 5
+})
+album16 = Album.new({
+  'title' => 'Killing Moon',
+  'artist_id' => artist9.id,
+  'genre' => 'Rock',
+  'quantity' => 56,
+  'buy_price' => 4,
+  'sell_price' => 8
+})
 
-albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10, album11, album12, album13, album14]
+
+albums = [album1, album2, album3, album4, album5, album6, album7, album8, album9, album10, album11, album12, album13, album14, album15, album16]
 # save all the albums
 albums.each{|album| album.save()}
 
