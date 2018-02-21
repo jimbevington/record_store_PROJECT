@@ -39,3 +39,9 @@ post '/inventory/search' do
   @albums = Album.search(params['term'])
   erb(:search_results)
 end
+
+post '/inventory/filter' do
+  @stock_level = params['stock_level']
+  @albums = Album.all()
+  erb(:filtered_results)
+end
