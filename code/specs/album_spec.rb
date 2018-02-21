@@ -14,7 +14,9 @@ class TestAlbum < MiniTest::Test
     @album = Album.new({
       'title' => 'This Nations Saving Grace',
       'artist_id' => @artist.id,
-      'quantity' => 25
+      'quantity' => 25,
+      'buy_price' => 3,
+      'sell_price' => 9
     })
   end
 
@@ -38,5 +40,8 @@ class TestAlbum < MiniTest::Test
     assert_equal('low', album.stock_level())
   end
 
+  def test_markup
+    assert_equal('200%', @album.markup())
+  end
 
 end
