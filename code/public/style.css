@@ -242,15 +242,12 @@ td{
 td.red_tr{
   background: #FD2F2F;
 }
-
 td.amber_tr{
   background: #FDB82F;
 }
-
 td.green_tr{
   background: #43FF50;
 }
-
 td.grey_tr{
   background: grey;
 }

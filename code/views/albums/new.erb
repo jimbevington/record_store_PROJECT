@@ -15,11 +15,15 @@
   <label for="quantity">Quantity:</label>
   <input type="number" name="quantity">
 
-  <label for="buy_price">Buy Price:</label>
-  <input type="number" name="buy_price">
+  <label for="buy_price">
+    Buy Price: <span class="italic-text small-text"> (min. 1)</span>
+  </label>
+  <input type="number" name="buy_price" min="1">
 
-  <label for="sell_price">Sell Price:</label>
-  <input type="number" name="sell_price">
+  <label for="sell_price">
+    Sell Price: <span class="italic-text small-text"> (min. 1)</span>
+  </label>
+  <input type="number" name="sell_price" min="1">
 
   <input type="submit" value="Create">
 
