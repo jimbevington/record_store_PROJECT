@@ -121,6 +121,7 @@ main{
 .button{
   background: rgba(177, 237, 232, 1);
   border-radius: 3px;
+  border: solid 1px rgba(109, 67, 90, 1);
   padding:10px;
   width:inherit;
   margin-top:0.5em;
@@ -314,6 +315,7 @@ input:focus{
 input[type=submit]{
   background: rgba(177, 237, 232, 1);
   border-radius: 3px;
+  border: solid 1px rgba(109, 67, 90, 1);
   padding:10px;
   width:inherit;
   margin-top:0.5em;
@@ -376,4 +378,8 @@ form.search_form{
 
 .no-bottom-space{
   margin-bottom:0;
+}
+
+.black{
+  background: black;
 }
