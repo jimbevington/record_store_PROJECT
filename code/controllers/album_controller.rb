@@ -11,21 +11,23 @@ get '/albums/new' do
 end
 
 post '/albums' do
-  # issue - what happens if the Artist doesn't exist
-  @artist = params['artist']
+  # get Artist object as var
   artist = Artist.find_by_name(params['artist'])
+  # if Artist is present, create album
   unless artist == nil
     params['artist_id'] = artist.id
     album = Album.new(params)
     album.save()
     redirect to("/albums/#{album.id}")
+  # if no Artist present, redirect to 'No Artist'
   else
+    @artist = params['artist']
     erb(:"albums/no_artist")
   end
 end
 
 get '/albums/:id' do
-  @album = Album.find_by_id(params['id'].to_i)
+  @album = Album.find_by_id(params['id'])
   erb( :"albums/view" )
 end
 
@@ -36,8 +38,10 @@ get '/albums/:id/edit' do
 end
 
 post '/albums/:id/update' do
+  # form doesn't send Artist ID, so get it
   artist = Artist.find_by_name(params['artist'])
   params['artist_id'] = artist.id
+
   album = Album.new(params)
   album.update()
   redirect to("/albums/#{album.id}")
