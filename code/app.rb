@@ -37,6 +37,13 @@ end
 
 post '/inventory/search' do
   @albums = Album.search(params['term'])
+  # find albums by artist name
+  artists = Artist.search(params['term'])
+  artist_albums = artists.map{|artist| artist.albums()}
+  artist_albums.flatten! # flatten to single array
+  artist_albums.uniq! # remove duplicates
+  # add the albums by artist name to the @albums []
+  artist_albums.each{|album| @albums.push(album)}
   erb(:search_results)
 end
 
