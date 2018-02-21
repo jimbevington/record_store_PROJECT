@@ -72,6 +72,7 @@ method="post" action="/inventory/filter">
   <label for="filter_by">Filter by Stock Level</label>
   <select name="stock_level" id="stock_level">
 
+    <!-- If statements sets SELECTED option based on last choice -->
     <option value="high"
 
       <% if @stock_level == 'high' %>

@@ -87,14 +87,19 @@
 
 </form>
 
+<!-- Filter by Stock level -->
 <form class="search_form no-padding no-margin"
-method="post" action="/inventory/filter">
+      method="post" action="/inventory/filter">
+
   <label for="filter_by">Filter by Stock Level</label>
+
   <select name="stock_level" id="stock_level">
     <option value="high">High</option>
     <option value="medium">Medium</option>
     <option value="low">Low</option>
     <option value="out of stock">Out of Stock</option>
   </select>
+
   <input type="submit" value="Go">
+  
 </form>

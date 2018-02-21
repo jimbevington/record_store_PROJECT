@@ -86,4 +86,22 @@ class Artist
     end
   end
 
+  def self.search(term)
+    # set up comparisons for searching in SQL results.
+    # Note:- search is too broad, will pick up any character chain in any word
+    term_start_lc = term.downcase + '%'
+    term_end_lc = '%' + term.downcase
+    term_mid_lc = '%' + term.downcase + '%'
+    term_start_cap = term.capitalize + '%'
+    term_end_cap = '%' + term.capitalize
+    term_mid_cap = '%' + term.capitalize + '%'
+    sql = "SELECT * FROM artists WHERE (name LIKE $1) OR (name LIKE $2)
+           OR (name LIKE $3) OR (name LIKE $4) OR (name LIKE $5)
+           OR (name LIKE $6)"
+    values = [term_start_lc, term_start_cap,
+              term_end_lc, term_end_cap, term_mid_lc, term_mid_cap]
+    result = SqlRunner.run(sql, values)
+    return result.map{|artist| Artist.new(artist)}
+  end
+
 end
