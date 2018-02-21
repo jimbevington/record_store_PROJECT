@@ -22,6 +22,7 @@ end
 
 post '/inventory' do
   @albums = Album.all_order_by(params['field'])
+  @ordered_field = params['field']
   erb(:inventory)
 end
 
