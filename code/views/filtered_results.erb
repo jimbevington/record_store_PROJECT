@@ -66,3 +66,46 @@
   <p>No Results</p>
 
 <% end %>
+
+<form class="search_form no-padding no-margin"
+method="post" action="/inventory/filter">
+  <label for="filter_by">Filter by Stock Level</label>
+  <select name="stock_level" id="stock_level">
+
+    <option value="high"
+
+      <% if @stock_level == 'high' %>
+        selected
+      <% end %>
+    >
+      High
+    </option>
+
+    <option value="medium"
+
+      <% if @stock_level == 'medium' %>
+        selected
+      <% end %>
+    >
+      Medium
+    </option>
+
+    <option value="low"
+      <% if @stock_level == 'low' %>
+        selected
+      <% end %>
+    >
+      Low
+    </option>
+
+    <option value="out of stock"
+      <% if @stock_level == 'out of stock' %>
+        selected
+      <% end %>
+    >
+      Out of Stock
+    </option>
+
+  </select>
+  <input type="submit" value="Go">
+</form>
