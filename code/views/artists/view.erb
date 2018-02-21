@@ -7,7 +7,7 @@
 </h4>
 
 <!-- check if the Artist has Albums -->
-<% if @albums.length() > 1 %>
+<% if @albums.length() >= 1 %>
 
   <!-- print Albums if present -->
   <table>
@@ -52,7 +52,7 @@
 <section class="flex_item_compact">
 
   <a class="big_link no_underline" href="./<%= @artist.id %>/edit">Edit</a>
-  
+
   <a class="big_link no_underline"
      href="./<%= @artist.id %>/delete_are_you_sure">
      Delete
