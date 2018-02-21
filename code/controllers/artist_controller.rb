@@ -12,11 +12,13 @@ end
 post '/artists' do
   artist = Artist.new(params)
   artist.save()
+  # view Artist info page once created
   redirect to("/artists/#{artist.id}")
 end
 
 get '/artists/:id' do
   @artist = Artist.find_by_id(params['id'].to_i)
+  # get all artists albums to display
   @albums = @artist.albums
   erb(:"artists/view")
 end

@@ -16,16 +16,19 @@ class Album
   end
 
   def save()
-    sql = "INSERT INTO albums (title, artist_id, genre, quantity, buy_price, sell_price)
+    sql = "INSERT INTO albums
+           (title, artist_id, genre, quantity, buy_price, sell_price)
            VALUES ($1, $2, $3, $4, $5, $6) RETURNING *"
     values = [@title, @artist_id, @genre, @quantity, @buy_price, @sell_price]
     @id = SqlRunner.run(sql, values)[0]['id'].to_i
   end
 
   def update()
-    sql = "UPDATE albums SET (title, artist_id, genre, quantity, buy_price, sell_price) =
-           ($1, $2, $3, $4, $5, $6) WHERE id = $%7"
-    values = [@title, @artist_id, @genre, @quantity, @buy_price, @sell_price, @id]
+    sql = "UPDATE albums SET
+          (title, artist_id, genre, quantity, buy_price, sell_price) =
+          ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    values = [@title, @artist_id, @genre,
+              @quantity, @buy_price, @sell_price, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -80,10 +83,19 @@ class Album
   end
 
   def self.search(term)
-    term_lc = term.downcase + '%'
-    term_cap = term.capitalize + '%'
-    sql = "SELECT * FROM albums WHERE (title LIKE $1) OR (title LIKE $2)"
-    values = [term_lc, term_cap]
+    # set up comparisons for searching in SQL results.
+    # Note:- search is too broad, will pick up any character chain in any word
+    term_start_lc = term.downcase + '%'
+    term_end_lc = '%' + term.downcase
+    term_mid_lc = '%' + term.downcase + '%'
+    term_start_cap = term.capitalize + '%'
+    term_end_cap = '%' + term.capitalize
+    term_mid_cap = '%' + term.capitalize + '%'
+    sql = "SELECT * FROM albums WHERE (title LIKE $1) OR (title LIKE $2)
+           OR (title LIKE $3) OR (title LIKE $4) OR (title LIKE $5)
+           OR (title LIKE $6)"
+    values = [term_start_lc, term_start_cap,
+              term_end_lc, term_end_cap, term_mid_lc, term_mid_cap]
     result = SqlRunner.run(sql, values)
     return result.map{|album| Album.new(album)}
   end
