@@ -63,11 +63,14 @@ class Artist
     if artist.length() > 0
       return artist[0]
     else
+      # returning Nil stops Errors when no Artist found
+      # allowing other functions to act accordingly.
+      # see artist_controller > post '/albums' method
       return nil
     end
   end
 
-  # could adjust to handle up/down case
+  # Note:- could adjust to handle up/down case
   def self.find_by_name(name)
     sql = "SELECT * FROM artists WHERE name = $1"
     values = [name]
@@ -76,6 +79,9 @@ class Artist
     if artist.length() > 0
       return artist[0]
     else
+      # returning Nil stops Errors when no Artist found
+      # allowing other functions to act accordingly.
+      # see artist_controller > post '/albums' method
       return nil
     end
   end
