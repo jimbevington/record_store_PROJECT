@@ -6,17 +6,6 @@ require_relative('models/artist.rb')
 require_relative('controllers/album_controller.rb')
 require_relative('controllers/artist_controller.rb')
 
-# CSS class names for styling of Stock Levels
-# $stock_style_classes = {
-#   'high' => "green_tr",
-#   'medium' => "amber_tr",
-#   'low' => "red_tr",
-#   'out of stock' => "grey_tr"
-# }
-
-
-# can dispense with stock style classes and have classes called high medium and low.
-
 # can create an Artist when creating an album with Artist that doesn't exist
 
 # use LOWER in Sql to lowercase all search stuff
