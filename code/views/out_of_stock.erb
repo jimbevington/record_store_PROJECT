@@ -16,7 +16,7 @@
   <% for album in @albums %>
 
     <!-- get Data if Album OUT OF STOCK -->
-    <% if album.stock_level == 'out of stock' %>
+    <% if album.stock_level == 'out-of-stock' %>
 
       <tr>
 
@@ -41,7 +41,7 @@
 
         <!-- insert a CSS class based on Stock Level -->
         <td class="center-text
-          <%= $stock_style_classes[album.stock_level] %>">
+          <%= album.stock_level %>">
             <%= album.stock_level %>
         </td>
 

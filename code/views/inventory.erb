@@ -60,7 +60,7 @@
   <% for album in @albums %>
 
     <!-- filter out Out of Stock albums -->
-    <% unless album.stock_level == 'out of stock' %>
+    <% unless album.stock_level == 'out-of-stock' %>
 
       <tr>
 
@@ -85,7 +85,7 @@
 
         <!-- insert a CSS class based on Stock Level -->
         <td class="center-text
-                  <%= $stock_style_classes[album.stock_level] %>">
+                  <%= album.stock_level %>">
           <%= album.stock_level %>
         </td>
 
@@ -119,7 +119,7 @@
     <option value="high">High</option>
     <option value="medium">Medium</option>
     <option value="low">Low</option>
-    <option value="out of stock">Out of Stock</option>
+    <option value="out-of-stock">Out of Stock</option>
   </select>
 
   <input type="submit" value="Go">

@@ -43,7 +43,7 @@
   <tr>
     <th>Stock Level</th>
     <!-- assign CSS class based on Stock Level -->
-    <td class="<%= $stock_style_classes[@album.stock_level] %>">
+    <td class="<%= @album.stock_level %>">
       <%= @album.stock_level %>
     </td>
   </tr>

@@ -1,0 +1,13 @@
+TO DO :-
+
+# can dispense with stock style classes and have classes called high medium and low.
+
+# can create an Artist when creating an album with Artist that doesn't exist
+
+# use LOWER in Sql to lowercase all search stuff
+
+- - - -
+
+change Search & Filter forms to GET methods, not post
+
+change search controller to put the horrible logic in the Models

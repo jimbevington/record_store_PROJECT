@@ -239,7 +239,7 @@ td{
   text-align: center;
 }
 
-td.red_tr{
+/* td.red_tr{
   background: #FD2F2F;
 }
 td.amber_tr{
@@ -249,6 +249,19 @@ td.green_tr{
   background: #43FF50;
 }
 td.grey_tr{
+  background: grey;
+} */
+
+td.low{
+  background: #FD2F2F;
+}
+td.medium{
+  background: #FDB82F;
+}
+td.high{
+  background: #43FF50;
+}
+td.out-of-stock{
   background: grey;
 }
 
