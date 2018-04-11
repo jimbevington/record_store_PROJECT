@@ -1,7 +1,5 @@
 TO DO :-
 
-# can dispense with stock style classes and have classes called high medium and low.
-
 # can create an Artist when creating an album with Artist that doesn't exist
 
 # use LOWER in Sql to lowercase all search stuff

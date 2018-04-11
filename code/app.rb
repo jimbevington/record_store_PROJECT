@@ -6,10 +6,6 @@ require_relative('models/artist.rb')
 require_relative('controllers/album_controller.rb')
 require_relative('controllers/artist_controller.rb')
 
-# can create an Artist when creating an album with Artist that doesn't exist
-
-# use LOWER in Sql to lowercase all search stuff
-
 get '/' do
   @albums = Album.all()
   erb(:index)
