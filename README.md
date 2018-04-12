@@ -1,6 +1,6 @@
 # *'Vibrant Matter'* Stock Manager
 
-*Completed according to brief provided by Codeclan.*
+*Brief provided by Codeclan.*
 
 Stock management software for a fictional record shop, developed with Ruby, Sinatra and PostgreSQL.
 
@@ -34,3 +34,4 @@ createdb record_shop
 ruby code/app.rb
 ```
 
+4. Navigate to [https://localhost:4567/](https://localhost:4567/)
